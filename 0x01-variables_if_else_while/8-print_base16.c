@@ -18,12 +18,12 @@ int main(void)
 		n++;
 	}
 
-	char c = 'a';
+	n = 0;
 
-	while (c <= 'f')
+	while (n <= 6)
 	{
-		putchar(c);
-		c++;
+		putchar('a' + n);
+		n++;
 	}
 	putchar('\n');
 	return (0);
