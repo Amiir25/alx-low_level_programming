@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -24,5 +25,4 @@ void jack_bauer(void)
 			_putchar('\n');
 		}
 	}
-	_putchar('\n');
 }
