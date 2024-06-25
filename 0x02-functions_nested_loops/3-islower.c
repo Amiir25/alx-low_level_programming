@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - Entry point
+ * _islower - Accepts variable c
  *
  * Return: int
  */
