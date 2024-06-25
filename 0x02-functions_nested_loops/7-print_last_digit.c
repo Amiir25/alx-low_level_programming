@@ -9,5 +9,7 @@
 
 int print_last_digit(int n)
 {
-	return ((n % 10) * 11);
+	int digit = (n % 10) * 11;
+
+	return (digit);
 }
