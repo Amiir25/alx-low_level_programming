@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -9,9 +8,8 @@
 
 void print_numbers(void)
 {
-	int i;
+	int i = 0;
 
-	i = 0;
 	do {
 		_putchar('0' + i);
 		i++;
