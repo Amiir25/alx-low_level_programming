@@ -11,26 +11,26 @@ int main(void)
 {
 	int i;
 
-	for (i = 1; i <= 100; i++)
+	for (int i = 1; i <= 100; i++)
 	{
-		if ((i % 3) == 0)
+		if (i % 3 == 0)
 		{
-			if ((i % 3) == 0 && (i % 5) == 0)
+			if (i % 5 == 0)
 			{
-				printf("%8s ", "FizzBuzz");
+				printf("%s ", "FizzBuzz");
 			}
 			else
 			{
-				printf("%4s ", "Fizz");
+				printf("%s ", "Fizz");
 			}
 		}
-		else if ((i % 5) == 0)
+		else if (i % 5 == 0)
 		{
-			printf("%4s ", "Buzz");
+			printf("%s ", "Buzz");
 		}
 		else
 		{
-			printf("%d ", i);
+			printf("%i ", i);
 		}
 	}
 	puts("");
