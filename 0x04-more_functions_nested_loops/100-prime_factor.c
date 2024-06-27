@@ -9,24 +9,41 @@
 int main(void)
 {
 	long int number = 612852475143;
-	long int largest;
+	long int largest = 0;
+	long int i = 2;
 
-	while ((number % 2 == 0) || (number % 3 == 0))
+	while (number % i == 0)
 	{
-		if (number > 3)
+		largest = i;
+		number /= i;
+	}
+	i = 3;
+
+	while (number % i == 0)
+	{
+		largest = i;
+		number /= i;
+	}
+
+	for (i = 5; i * i <= number; i += 6)
+	{
+		while (number % i == 0)
 		{
-			if (number % 2 == 0)
-			{
-				number /= 2;
-			}
-			else
-			{
-				number /= 3;
-			}
+			largest = i;
+			number /= i;
+		}
+
+		while (number % (i + 2) == 0)
+		{
+			largest = i;
+			number /= i;
 		}
 	}
 
-	largest = number;
+	if (number > 1)
+	{
+		largest = number;
+	}
 
 	printf("%li\n", largest);
 
