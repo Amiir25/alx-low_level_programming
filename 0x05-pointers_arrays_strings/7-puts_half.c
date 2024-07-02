@@ -9,18 +9,21 @@
 
 void puts_half(char *str)
 {
-	int i, len, half;
+	int len = strlen(str);
+	int start;
 
-	len = strlen(str);
-	half = len / 2;
-	if (half % 2 != 0)
+	if (len % 2 == 0)
 	{
-		half++;
+		start = len / 2;
+	}
+	else
+	{
+		start = (len - 1) / 2 + 1;
 	}
 
-	for (i = half; i <= len - 1; i++)
+	for (int i = start; i < len; i++)
 	{
-		printf("%c", str[i]);
+		putchar(str[i]);
 	}
-	puts("");
+	putchar('\n');
 }
