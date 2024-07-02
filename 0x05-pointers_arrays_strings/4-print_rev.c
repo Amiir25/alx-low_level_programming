@@ -9,16 +9,12 @@
 
 void print_rev(char *s)
 {
-	int i, j, k;
-	char rev[446];
+	int i, j;
 
 	i = strlen(s);
-	k = 0;
 	for (j = i - 1; j >= 0; j--)
 	{
-		rev[k] = s[j];
-		k++;
+		printf("%c", s[j]);
 	}
-
-	printf("%s\n", rev);
+	puts("");
 }
