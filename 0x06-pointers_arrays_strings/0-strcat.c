@@ -15,7 +15,8 @@ char *_strcat(char *dest, char *src)
 	int i;
 	char *hold;
 
-	if ((hold = strchr(src, '\n')) != NULL)
+	hold = strchr(src, '\n');
+	if (hold != NULL)
 	{
 		*hold = '\0';
 	}
