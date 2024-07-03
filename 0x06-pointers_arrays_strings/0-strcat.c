@@ -12,7 +12,6 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int i;
 	char *hold;
 
 	hold = strchr(src, '\n');
