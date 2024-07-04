@@ -13,6 +13,7 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
+	int i;
 	char *hold;
 
 	hold = strchr(src, '\n');
@@ -21,7 +22,10 @@ char *_strncpy(char *dest, char *src, int n)
 		*hold = '\0';
 	}
 
-	strncpy(dest, src, n);
+	for (i = 0; i < n; i++)
+	{
+		dest[i] = src[i];
+	}
 
 	return (dest);
 }
