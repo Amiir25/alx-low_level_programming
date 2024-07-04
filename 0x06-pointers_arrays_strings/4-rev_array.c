@@ -12,7 +12,7 @@
 
 void reverse_array(int *a, int n)
 {
-	int i, j, hold;
+	int i, j, k, hold;
 
 	i = 0;
 	j = n - 1;
@@ -26,5 +26,14 @@ void reverse_array(int *a, int n)
 		j--;
 	}
 
-	printf("%ls\n", a);
+	for (k = 0; k < n; k++)
+	{
+		if (k != 0)
+		{
+			printf(", ");
+		}
+		printf("%d", a[k]);
+	}
+
+	printf("\n");
 }
