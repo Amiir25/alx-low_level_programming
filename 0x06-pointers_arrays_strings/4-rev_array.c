@@ -21,14 +21,7 @@ void reverse_array(int *a, int n)
 		hold = a[i];
 		a[i] = a[j];
 		a[j] = hold;
-/*
-		if (i != 0)
-		{
-			printf(", ");
-		}
 
-		printf("%d", a[i]);
-*/
 		i++;
 		j--;
 	}
