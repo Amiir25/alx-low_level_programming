@@ -12,6 +12,7 @@
 
 char *_strcat(char *dest, char *src)
 {
+	int i, j;
 	char *hold;
 
 	hold = strchr(src, '\n');
@@ -20,5 +21,12 @@ char *_strcat(char *dest, char *src)
 		*hold = '\0';
 	}
 
-	return (strcat(dest, src));
+	j = strlen(dest);
+	for (i = 0; i < strlen(src); i++)
+	{
+		dest[j] = src[i];
+		j++;
+	}
+
+	return (dest);
 }
