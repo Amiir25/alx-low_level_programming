@@ -21,12 +21,5 @@ char *_strcat(char *dest, char *src)
 		*hold = '\0';
 	}
 
-	j = strlen(dest);
-	for (i = 0; i < strlen(src); i++)
-	{
-		dest[j] = src[i];
-		j++;
-	}
-
-	return (dest);
+	return (strcat(dest, src));
 }
