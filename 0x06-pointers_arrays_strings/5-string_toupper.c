@@ -12,6 +12,13 @@
 
 char *string_toupper(char *str)
 {
+	char *hold;
+
+	hold = strchr(str, '\n');
+	if (hold != NULL)
+	{
+		*hold = '\0';
+	}
 
 	while (*str)
 	{
