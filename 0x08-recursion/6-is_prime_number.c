@@ -24,6 +24,14 @@ int is_prime_number(int n)
 	return (result);
 }
 
+/**
+ * check_prime - check if a number is prime
+ * @n: the number to be checked
+ * @i: the divisor
+ *
+ * Return: 1 for prime or 0
+ */
+
 int check_prime(int n, int i)
 {
 	if (i * i > n)
