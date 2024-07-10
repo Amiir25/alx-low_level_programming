@@ -44,5 +44,5 @@ int check_pal(char *s, int start, int end)
 		return (0);
 	}
 
-	check_pal(s, start + 1, end - 1);
+	return (check_pal(s, start + 1, end - 1));
 }
