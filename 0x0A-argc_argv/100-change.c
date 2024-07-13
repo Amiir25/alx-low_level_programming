@@ -20,8 +20,9 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
+	result = 0;
 	cent = atoi(argv[1]);
-	if (cent == 0)
+	if (cent < 0)
 	{
 		printf("0\n");
 		return (1);
