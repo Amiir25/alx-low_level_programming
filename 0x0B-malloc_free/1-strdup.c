@@ -4,13 +4,18 @@
 #include "main.h"
 
 /**
- * *_strdup - 
- * @str:
+ * *_strdup - duplicate a string
+ * @str: the string
  *
- * Return: 
+ * Return: the pointer to the newly allocated space that contains the duplicated string
  */
 
 char *_strdup(char *str)
 {
-	return (strdup(str));
+	char *new_str;
+
+	new_str = (char *)malloc(sizeof(str));
+	new_str = strdup(str);
+
+	return (new_str);
 }
