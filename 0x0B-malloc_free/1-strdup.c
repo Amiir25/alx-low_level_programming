@@ -7,7 +7,7 @@
  * *_strdup - duplicate a string
  * @str: the string
  *
- * Return: the pointer to the newly allocated space that contains the duplicated string
+ * Return: the pointe that contains the duplicated string
  */
 
 char *_strdup(char *str)
