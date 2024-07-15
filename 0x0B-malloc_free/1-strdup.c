@@ -14,8 +14,6 @@ char *_strdup(char *str)
 {
 	char *new_str;
 
-	new_str = (char *)malloc(sizeof(str));
 	new_str = strdup(str);
-
 	return (new_str);
 }
