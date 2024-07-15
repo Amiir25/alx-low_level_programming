@@ -13,7 +13,9 @@
 
 char *str_concat(char *s1, char *s2)
 {
+	int i;
 	char *new_cat;
+	char *str_cat;
 
 	if (s1 == NULL)
 	{
@@ -31,5 +33,11 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	return (strcat(s1, s2));
+	str_cat = strcat(s1, s2);
+	for (i = 0; str_cat[i] != '\0'; i++)
+	{
+		new_cat[i] = str_cat[i];
+	}
+
+	return (new_cat);
 }
