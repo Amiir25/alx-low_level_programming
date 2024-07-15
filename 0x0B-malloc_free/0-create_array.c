@@ -13,9 +13,15 @@
 char *create_array(unsigned int size, char c)
 {
 	unsigned int i;
-	char *one_char = (char *)malloc(size);
+	char *one_char;
 
 	if (size == 0)
+	{
+		return (NULL);
+	}
+
+	one_char = (char *)malloc(size);
+	if (one_char == NULL)
 	{
 		return (NULL);
 	}
