@@ -26,13 +26,10 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	new_cat = (char *)malloc(sizeof(s1) + sizeof(s2));
-
 	if (new_cat == NULL)
 	{
 		return (NULL);
 	}
 
-	new_cat = strcat(s1, s2);
-
-	return (new_cat);
+	return (strcat(s1, s2));
 }
