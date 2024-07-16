@@ -12,10 +12,17 @@
 
 char *_strdup(char *str)
 {
+	char *str_dup;
+	size_t str_len;
+
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	return (strdup(str));
+	str_len = strlen(str) + 1;
+	str_dup = (char *)malloc(str_len * sizeof(char));
+	str_dup = strdup(str);
+
+	return (str_dup);
 }
