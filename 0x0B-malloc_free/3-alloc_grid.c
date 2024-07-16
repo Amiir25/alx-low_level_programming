@@ -44,7 +44,6 @@ int **alloc_grid(int width, int height)
 		{
 			new_array[i][j] = 0;
 		}
-		printf("\n");
 	}
 
 	return (new_array);
