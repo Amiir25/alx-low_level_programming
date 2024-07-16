@@ -27,42 +27,25 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	i = 0;
-	while (i < height)
+	for (i = 0; i < height; i++)
 	{
 		new_array[i] = (int *)malloc(width * sizeof(int));
 		if (new_array[i] == NULL)
 		{
-			j = 0;
-			while (j < i)
+			for (j = 0; j < i; j++)
 			{
 				free(new_array[j]);
-				j++;
 			}
 			free(new_array);
 			return (NULL);
 		}
 
-		j = 0;
-		while (j < width)
+		for (j = 0; j < width; j++)
 		{
 			new_array[i][j] = 0;
-			j++;
 		}
 		printf("\n");
-		i++;
 	}
 
 	return (new_array);
-
-	if (new_array != NULL)
-	{
-		i = 0;
-		while (i < height)
-		{
-			free(new_array[i]);
-			i++;
-		}
-		free(new_array);
-	}
 }
