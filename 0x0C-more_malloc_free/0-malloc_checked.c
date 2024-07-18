@@ -13,10 +13,10 @@ void *malloc_checked(unsigned int b)
 {
 	int *address;
 
-	address =(malloc(b);
+	address = (malloc(b);
 	if (address == NULL)
 	{
-		exit (98);
+		exit(98);
 	}
 
 	return (address);
