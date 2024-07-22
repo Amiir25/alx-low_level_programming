@@ -1,5 +1,5 @@
-#ifndef SUM_H
-#define SUM_H
+#ifndef ABS_H
+#define ABS_H
 
 #define ABS(x) (abs(x))
 
