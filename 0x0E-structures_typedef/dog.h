@@ -8,4 +8,7 @@ struct dog
 	char *owner;
 };
 
+void init_dog(struct dog *, char *, float, char *);
+struct dog dog_t;
+
 #endif
