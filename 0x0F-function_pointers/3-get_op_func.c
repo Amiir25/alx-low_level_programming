@@ -1,32 +1,31 @@
 #include <stdio.h>
-#include <string.h>
-#include "function_pointers.h"
+#include "3-calc.h"
 
 /**
  * get_op_func - get function for operation
  * @s: the operator
- * 
+ *
  * Return: pointer to operation function
  */
 
-op_t get_op_func(char *s)
+int (*get_op_func(char *s)(int, int))
 {
 	int i;
-	op_t ops[] = 
-	{
+	op_t ops[] = {
 		{"+", op_add},
-		{"+", op_sub},
-		{"+", op_mul},
-		{"+", op_div},
-		{"+", op_mod},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
 		{NULL, NULL},
 	}
 
-	while (i < 5)
+	i = 0;
+	while (ops[i].op != NULL)
 	{
-		if (strstr(ops[i], s))
+		if (*(ops[i].op == *s && s[1] == '\0'))
 		{
-			return (ops[i][1]);
+			return (ops[i].f);
 		}
 		i++;
 	}

@@ -9,38 +9,30 @@
  * Return: Always 0
  */
 
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
 	int a, b;
 	int result;
-	op_t operator;
+	int (*operator)(int, int);
 
-	if (argc > 3)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		return (98);
 	}
 
-	if (
-	    argv[1] != "+" ||
-	    argv[1] != "-" ||
-	    argv[1] != "*" ||
-	    argv[1] != "/" ||
-	    argv[1] != "%")
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	operator = get_op_func(argv[2]);
+	if (operator == NULL)
 	{
 		printf("Error\n");
 		return (99);
 	}
 
-	a = atoi(argv[0]);
-	b = atoi(argv[2]);
-	operator = get_op_func(argv[1]);
+	result = operator(a, b);
 
-	if (operator != NULL)
-	{
-		result = operator(a, b);
-	}
-
-	printf(result\n);
+	printf("%d\n", result);
 	return (0);
 }
