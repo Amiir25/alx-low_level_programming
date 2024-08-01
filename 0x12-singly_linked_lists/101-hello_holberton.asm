@@ -1,17 +1,16 @@
 section .data
-    format db "%s", 10, 0
-    message db "Hello, Holberton", 0
+    fmt db 'Hello, Holberton', 0xA, 0
 
 section .text
-    global main
+    extern printf
+    global _start
 
-main:
-    push rbp
-    mov rdi, format
-    mov rsi, message
-    mov rax, 0 ; can be xor rax, rax
+_start:
+    mov rdi, fmt
+
+    mov rax, 0
     call printf
 
-    pop rbp
-    mov rax, 0 ; normal, no error, return value
-    ret
+    mov rax, 60
+    xor rdi, rdi
+    syscall
