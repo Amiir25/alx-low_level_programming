@@ -11,26 +11,25 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i;
+	size_t i;
 	unsigned int result;
-	size_t len;
 
-	if (b == NULL)
+	if (!b)
 	{
 		return (0);
 	}
 
 	result = 0;
-	len = strlen(b);
-	for (i = 0; i < len; i++)
+	for (i = 0; b[i] != '\0'; i++)
 	{
-		if (b[i] == '1' || b[i] == '0')
+		if (b[i] == '0')
 		{
 			result <<= 1;
-			if (b[i] == '1')
-			{
-				result += 1;
-			}
+		}
+		else if (b[i] == '1')
+		{
+			result <<= 1;
+			result += 1;
 		}
 		else
 		{
