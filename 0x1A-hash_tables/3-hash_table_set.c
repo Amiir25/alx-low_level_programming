@@ -75,7 +75,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (new_node == NULL)
 		return (0);
 
-	/* putting the new node at fron */
+	/* putting the new node at front */
 	new_node->next = ht->array[i];
 	ht->array[i] = new_node;
 
