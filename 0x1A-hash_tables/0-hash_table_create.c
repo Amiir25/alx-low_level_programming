@@ -13,7 +13,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	table = malloc(size * sizeof(hash_table_t));
 	if (table == NULL)
+	{
+		free(table);
 		return (NULL);
+	}
 
 	table->size = size;
 	table->array = calloc(size, sizeof(hash_node_t));
