@@ -29,9 +29,10 @@ typedef struct hash_node_s
  * struct hash_table_s - Hash table data structure
  *
  * @size: The size of the array
- * @Array: An array of size @size
- * Each cell of this array is a pointer ti the first node of a linked list,
- * because we want our HashTable to use a chaining collision handling
+ * @array: An array of size @size
+ * Each cell of this array is a pointer ti the first node
+ * of a linked list, because we want our HashTable to use
+ * a chaining collision handling
  */
 
 typedef struct hash_table_s
