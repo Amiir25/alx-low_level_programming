@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 
 /* Structures */
 
@@ -45,5 +45,6 @@ typedef struct hash_table_s
 /* Functions Prototypes */
 
 hash_table_t *hash_table_create(unsigned long int);
+unsigned long int hash_djb2(const unsigned char *);
 
 #endif  /* HASH_TABLES_H */
