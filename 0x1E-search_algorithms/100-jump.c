@@ -31,7 +31,6 @@ int jump_search(int *array, size_t size, int value)
 
 	printf("Value found between indexes [%ld] and [%ld]\n", first, last);
 
-	/* Ensure last index does not go beyond the array */
 	if (last >= size)
 		last = size - 1;
 
