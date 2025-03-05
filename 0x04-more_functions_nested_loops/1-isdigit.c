@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isdigit - checks a digit or a letter
+ * _isdigit - checks if a given parameter is a digit or a letter
  * @c: character variable
  *
  * Return: 1 or 0
